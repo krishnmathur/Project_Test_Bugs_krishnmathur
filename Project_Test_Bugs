@@ -1,18 +1,16 @@
-def add_strings(num1, num2):
-    if num1 == "" and num2 == "":
+def addNumbers(num1, num2):
+    if val_a == "" and val_b == "":
         return "0"
-    
-    # Rest of the code remains the same as before
-    len1 = len(num1)
-    len2 = len(num2)
+    len1 = len(val_a)
+    len2 = len(val_b)
     max_len = max(len1, len2)
-    num1 = num1.zfill(max_len)
-    num2 = num2.zfill(max_len)
+    val_a = val_a.zfill(max_len)
+    val_b = val_b.zfill(max_len)
     carry = 0
     result = []
     
     for i in range(max_len - 1, -1, -1):
-        digit_sum = int(num1[i]) + int(num2[i]) + carry
+        digit_sum = int(val_a[i]) + int(val_b[i]) + carry
         carry = digit_sum // 10
         digit_sum %= 10
         result.insert(0, str(digit_sum))
@@ -25,9 +23,9 @@ def add_strings(num1, num2):
     return result_str
 
 # Example usage
-num1_str = input("Enter the first number: ")
-num2_str = input("Enter the second number: ")
+val_a_str = input("Enter the first number: ")
+val_b_str = input("Enter the second number: ")
 
-result_str = add_strings(num1_str, num2_str)
+result_str = addNumbers(val_a_str, val_b_str)
 print("The sum is: " + result_str)
 
