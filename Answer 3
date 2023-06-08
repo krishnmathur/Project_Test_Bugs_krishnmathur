@@ -23,9 +23,18 @@ def addNumbers(val_a, val_b):
     return result_str
 
 # Example usage
-val_a_str = input("Enter the first number: ")
+val_a_str = input("Enter the first number: ")  
 val_b_str = input("Enter the second number: ")
 
 result_str = addNumbers(val_a_str, val_b_str)
 print("The sum is: " + result_str)
+
+#TEST CASES 
+# 1. Input with leading zeroes eg-0087 & 0054
+# 2. Input with empty strings eg-"" & ""
+# 3. Input with different lengths eg- 2345 & 45
+# 4. Input with large numbers eg-7878776677887776777 & 1
+# 5. Input negative numbers eg- -45 & -98
+# 6. Sum with carry eg- 78 & 89
+# 7. Sum with no carry eg- 45 & 12
 
