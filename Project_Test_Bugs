@@ -1,4 +1,4 @@
-def addNumbers(num1, num2):
+def addNumbers(val_a, val_b):
     if val_a == "" and val_b == "":
         return "0"
     len1 = len(val_a)
