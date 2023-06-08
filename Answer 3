@@ -1,6 +1,17 @@
 def addNumbers(val_a, val_b):
-    if val_a == "" and val_b == "":
-        return "0"
+    if val_a == "":
+        val_a = "0"
+    if val_b  == "":
+        val_b = "0"
+
+    is_negative = False
+    if val_a.startswith('-'):
+        val_a = val_a[1:]
+        is_negative = not is_negative
+    if val_b.startswith('-'):
+        val_b = val_b[1:]
+        is_negative = not is_negative
+
     len1 = len(val_a)
     len2 = len(val_b)
     max_len = max(len1, len2)
@@ -20,14 +31,18 @@ def addNumbers(val_a, val_b):
     
     result_str = ''.join(result)
     
+    if is_negative:
+        result_str = '-' + result_str
+    
     return result_str
 
 # Example usage
-val_a_str = input("Enter the first number: ")  
-val_b_str = input("Enter the second number: ")
+num1_str = input("Enter the first number: ")
+num2_str = input("Enter the second number: ")
 
 result_str = addNumbers(val_a_str, val_b_str)
 print("The sum is: " + result_str)
+
 
 #TEST CASES 
 # 1. Input with leading zeroes eg-0087 & 0054
