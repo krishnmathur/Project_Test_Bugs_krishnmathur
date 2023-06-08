@@ -1,0 +1,64 @@
+Mandatory Question 1: Elaborate on The Academic project 
+Answer: My Final Year Project was on Food Waste Management Application(A Mobile Application)
+(a)  The object of my application was to enable a link of communication and interactions among NGOs, donors and the needy. 
+The people wishing to donate will be able to see all the options available to them and do the same.
+The item they wish to donate then shall be collected by a volunteer who is connected to the donors via our application.
+The donated item shall safely reach the intended needy persons after this interaction.
+This application efficiently manages food wastage in restaurants by giving leftover food to NGOs. NGOs will raise a request, in case any leftover food restaurants have. 
+This request is sent to the restaurant manager of that particular restaurant. 
+The NGO manager then approves the request and assigns it to one of the NGO employees for take-away and responds to the restaurant.
+The restaurant manager can track the person sent through NGO by given information through NGO until he picks up the food. 
+The leftover food at the restaurant can be given to NGOs at the end of the day.
+
+
+(b) (i) Another system on similar thought is the concept of community fridges.
+Community fridges, also known as public fridges or solidarity fridges, are physical refrigerators or refrigerated cabinets placed in public spaces to facilitate the sharing and redistribution of food within a community. 
+The concept behind community fridges is to provide a platform where individuals and businesses can donate excess food, and those in need can access it freely.
+The goal is to reduce food waste, address food insecurity, and foster a sense of community sharing.
+(ii) Another such system application based on Food Sharing and waste management concept is the Food Waste Management solutions in Institutions like Schools, colleges or other corporations.
+Institutions such as schools, hospitals, and large corporations, implement specialized food waste management systems.
+These systems often involve on-site composting, anaerobic digestion, or other technologies to efficiently manage and repurpose food waste generated in these settings.
+
+
+(c) To test my food donation system, I followed a systematic approach that covered both the frontend and backend components the steps of which are as follows :
+Unit Testing:
+I started by writing unit tests for my backend code, such as functions or classes responsible for interacting with the Firebase database. I used the testing frameworks JUnit for this purpose.
+I ensured that my unit tests covered different scenarios, such as successful data insertion, retrieval, and error handling.
+
+Integration Testing:
+I did integration tests to verify the interaction between my frontend and backend components. Those tests ensured that data was correctly sent from the frontend form to the Firebase database, and then retrieved and displayed on the UI.
+I tested various scenarios, including successful form submission, handling of invalid data, and error handling during data retrieval.
+
+Firebase Testing:
+Firebase provides testing tools that were used to verify the functionality of my Firebase database and its integration with my app.
+I used Firebase Test Lab to perform device testing on virtual or physical devices. This helped me ensure that my app behaved correctly across different device configurations.
+
+End-to-End (E2E) Testing:
+E2E testing helped simulate user interactions and verified the entire flow of my food donation system.
+I used a framework namely Flutter Driver to write E2E tests that simulated user actions, such as filling out the form and submitting it, and then checking if the data appears correctly on the UI.
+
+Manual Testing:
+Manual testing ensured the overall user experience was smooth and error-free.
+Me with my team manually tested the app on different devices and screen sizes to verify the UI layout and responsiveness.
+
+
+(d) The Interesting bugs  encountered were as follows :
+(i) Validity: Like if the user enters empty fields, incorrect data formats or data exceeding field limits.
+(ii) Network issues: Like if during form submission or data retrieval, the network connection is lost.
+(iii) User Authentication and Security: To ensure that user data is protected and access controls are correctly enforced to prevent unauthorized access or data leaks.
+
+
+(e) Fixing of these above-mentioned bugs were done as follows :
+(i) This validity issue was resolved by incorporating appropriate error messages or feedback displayed to the user when validation fails.
+(ii) The network issue was resolved by incorporating continuous monitoring of the network connectivity status within my app.
+When the connection was lost, some features or buttons would get hidden that require an internet connection, such as submitting the form.
+Moreover we displayed a visual indicator, such as a message or icon, to inform the user about the connection status.
+(iii)  To resolve the issue of user authentication I used the process of hashing and salting.
+ 
+ 
+
+
+
+
+
+ 
