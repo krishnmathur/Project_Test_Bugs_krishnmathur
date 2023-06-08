@@ -37,8 +37,8 @@ def addNumbers(val_a, val_b):
     return result_str
 
 # Example usage
-num1_str = input("Enter the first number: ")
-num2_str = input("Enter the second number: ")
+val_a_str = input("Enter the first number: ")
+val_b_str = input("Enter the second number: ")
 
 result_str = addNumbers(val_a_str, val_b_str)
 print("The sum is: " + result_str)
