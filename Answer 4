@@ -1,1 +1,29 @@
+def bubble_sort(input_list):
+    n = len(input_list)
+    
+    # Traverse through all array elements
+    for i in range(n):
+        # Last i elements are already in place
+        for j in range(0, n - i - 1):
+            # Swap adjacent elements if they are in the wrong order
+            if input_list[j] > input_list[j + 1]:
+                input_list[j], input_list[j + 1] = input_list[j + 1], input_list[j]
 
+# Input list of integers from the keyboard
+input_list = input("Enter a list of integers (space-separated): ").split()
+input_list = [int(num) for num in input_list]
+
+# Sort the list using bubble sort
+bubble_sort(input_list)
+
+# Print the sorted list
+print("Sorted list:", input_list)
+
+# Test cases 
+# 1. Empty input list
+# 2. List with one element eg- 65
+# 3. List with duplicate elements eg- 23 23 23 345 56 98 98
+# 4. Already sorted list eg- 23 45 56 67 89 
+# 5. Negative numbers as input eg- 5 -9 -7 43 76 -98
+# 6. Already in descending order eg- 98 87 76 54 43 
+# 7. Large input list
