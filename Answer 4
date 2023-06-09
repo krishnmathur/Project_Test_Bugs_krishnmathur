@@ -27,3 +27,51 @@ print("Sorted list:", input_list)
 # 5. Negative numbers as input eg- 5 -9 -7 43 76 -98
 # 6. Already in descending order eg- 98 87 76 54 43 
 # 7. Large input list
+
+# Automation of test cases 
+
+
+import unittest
+
+
+class SortingTestCase(unittest.TestCase):
+    def test_sorting(self):
+        # Test Case 1: Basic Test Case
+        input_list = [4, 2, 7, 1, 5]
+        expected_output = [1, 2, 4, 5, 7]
+        self.assertListEqual(bubble_sort(input_list.copy()), expected_output)
+
+        # Test Case 2: Empty List
+        input_list = []
+        expected_output = []
+        self.assertListEqual(bubble_sort(input_list.copy()), expected_output)
+
+        # Test Case 3: List with One Element
+        input_list = [42]
+        expected_output = [42]
+        self.assertListEqual(bubble_sort(input_list.copy()), expected_output)
+
+        # Test Case 4: List with Duplicate Elements
+        input_list = [5, 3, 7, 3, 2, 5, 2]
+        expected_output = [2, 2, 3, 3, 5, 5, 7]
+        self.assertListEqual(bubble_sort(input_list.copy()), expected_output)
+
+        # Test Case 5: Already Sorted List
+        input_list = [1, 2, 3, 4, 5]
+        expected_output = [1, 2, 3, 4, 5]
+        self.assertListEqual(bubble_sort(input_list.copy()), expected_output)
+
+        # Test Case 6: Negative Numbers
+        input_list = [5, -2, 3, -7, 0, -1]
+        expected_output = [-7, -2, -1, 0, 3, 5]
+        self.assertListEqual(bubble_sort(input_list.copy()), expected_output)
+
+        # Test Case 7: Large List
+        input_list = list(range(1000, 0, -1))
+        expected_output = list(range(1, 1001))
+        self.assertListEqual(bubble_sort(input_list.copy()), expected_output)
+
+
+if __name__ == '__main__':
+    unittest.main()
+
